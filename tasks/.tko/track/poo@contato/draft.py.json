@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-23_22-08-49",
+            "content": "@@ -13,29 +13,4 @@\n     \n-def __init__(self,):%0A    \n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-24_09-16-01",
+            "content": "@@ -31,76 +31,11 @@\n elf,\n- id: int, number: str):%0A        self.__id:%0A        self.__number:%0A    %0A%0A\n+):%0A    \n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-24_09-29-30",
+            "content": "@@ -32,19 +32,19 @@\n lf, id: \n-str\n+int\n , number\n@@ -72,131 +72,17 @@\n __id\n- =  id%0A        self.__number = number%0A    def getId(self):%0A        return self.__id%0A    def getNumber(self):%0A        return\n+:%0A       \n  sel\n@@ -91,20 +91,16 @@\n __number\n-%0A    \n+:\n %0A    %0A%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-24_09-58-05",
+            "content": "@@ -106,17 +106,16 @@\n  number%0A\n-%0A\n     def \n@@ -152,21 +152,16 @@\n lf.__id%0A\n-    %0A\n     def \n@@ -215,82 +215,8 @@\n    %0A\n-    def __str__(self):%0A        return f%22%7Bself.__id%7D:%7Bself.__number%7D%22%0A    %0A\n     \n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-11-24_10-03-09",
+            "content": "@@ -290,141 +290,8 @@\n r%7D%22%0A\n-    %0A    def isValid(self):%0A        n = %220123456789().%22%0A        for x in self.__number:%0A            if x not in n:%0A                %0A%0A\n     \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-24_23-36-22",
+            "content": "@@ -346,58 +346,84 @@\n ).%22%0A\n-%0Aclass Contact:%0A    def __init__(self, name: str):\n+        for x in self.__number:%0A            if x not in n:%0A                %0A\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-24_23-37-52",
+            "content": "@@ -397,44 +397,8 @@\n r):%0A\n-        self.__name = name%0A        %0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-24_23-47-58",
+            "content": "@@ -1,436 +1,46 @@\n-class Fone:%0A    def __init__(self, id: str, number: str):%0A        self.__id =  id%0A        self.__number = number%0A%0A    def getId(self):%0A        return self.__id%0A    %0A    def getNumber(self):%0A        return self.__number%0A    %0A    def __str__(self):%0A        return f%22%7Bself.__id%7D:%7Bself.__number%7D%22%0A    %0A    def isValid(self):%0A        n = %220123456789().%22%0A%0Aclass Contact:%0A    def __init__(self, name: str):%0A        self.__name = name%0A%0A    \n+@@ -424,63 +424,21 @@%0A ame%250A%0A-%250A%0A     %0A-\n def \n@@ -75,17 +75,19 @@\n r: str):\n-%0A\n+%250A\n     %0A   \n@@ -91,50 +91,23 @@\n     \n-def rmFone(self, index: int):%0A        %0A%0A \n+ %250A%0A+    %0A %250A\n    %0A\n-%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2025-11-25_08-39-53",
+            "content": "@@ -423,55 +423,8 @@\n name\n-%0A    %0A    def __str__(self):%0A        return f%22%22\n %0A%0A  \n@@ -466,35 +466,16 @@\n : str):%0A\n-        IndexError%0A\n     %0A   \n@@ -509,157 +509,8 @@\n t):%0A\n-        IndexError%0A    %0A    def toogleFavorited(self):%0A        IndexError%0A    %0A    def isFavorited(self):%0A        return False%0A%0A    %0A    %0A    %0A%0A    %0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-11-25_08-46-39",
+            "content": "@@ -469,26 +469,8 @@\n n f%22\n-- %7Bself.__name%7D %5B%5D\n %22%0A%0A \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-25_08-59-33",
+            "content": "@@ -347,152 +347,8 @@\n .%22%0A%0A\n-        for x in self.__number:%0A            if x not in n:%0A                raise Exception (f%22fail: invalid number%22)%0A            return False%0A%0A%0A\n clas\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-25_10-50-10",
+            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id =  id\n        self.__number = number\n\n    def getId(self):\n        return self.__id\n    \n    def getNumber(self):\n        return self.__number\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n    \n    def isValid(self):\n        n = \"0123456789().\"\n\n        for x in self.__number:\n            if x not in n:\n                raise Exception (f\"fail: invalid number\")\n            return False\n\n\nclass Contact:\n    def __init__(self, name: str):\n        self.__name = name\n    \n    def __str__(self):\n        return f\"- {self.__name} []\"\n\n    def addFone(self, id: str, number: str):\n        IndexError\n    \n    def rmFone(self, index: int):\n        IndexError\n    \n    def toogleFavorited(self):\n        IndexError\n    \n    def isFavorited(self):\n        return False\n\n    \n    \n    \n\n    \n        \n\n    \n\n",
+            "lines": "51"
+        }
+    ]
+}

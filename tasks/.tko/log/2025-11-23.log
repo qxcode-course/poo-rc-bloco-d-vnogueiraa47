@@ -1,0 +1,10 @@
+2025-11-23 22:07:41, MOVE, v:1, k:poo@contato, mode:DOWN
+2025-11-23 22:08:48, MOVE, v:1, k:poo@contato, mode:PICK
+2025-11-23 22:08:49, EXEC, v:1, k:poo@contato, mode:FULL, rate:0, size:2
+2025-11-23 22:08:51, MOVE, v:1, k:poo@contato, mode:BACK
+2025-11-23 22:10:33, MOVE, v:1, k:poo@contato, mode:PICK
+2025-11-23 22:10:34, EXEC, v:1, k:poo@contato, mode:FULL, rate:0
+2025-11-23 22:10:35, MOVE, v:1, k:poo@contato, mode:BACK
+2025-11-23 22:10:45, MOVE, v:1, k:poo@contato, mode:PICK
+2025-11-23 22:10:46, EXEC, v:1, k:poo@contato, mode:FULL, rate:0
+2025-11-23 22:10:47, MOVE, v:1, k:poo@contato, mode:BACK
