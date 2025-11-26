@@ -24,21 +24,29 @@ class Fone:
 class Contact:
     def __init__(self, name: str):
         self.__name = name
+        self.__fones = list[Fone] = []
+        self.__favorited = False
     
     def __str__(self):
-        return f"- {self.__name} []"
+        prefixo = "-"
+        if self.__favorited:
+            prefixo = "@"
+        
+        telefones = ", ".join(f"{x}:{y}" for x, y in self.__fones)
+
+        return f"{prefixo} {self.__name} [{telefones}]"
 
     def addFone(self, id: str, number: str):
-        IndexError
-    
+        self.__fones.append((id, number))
+
     def rmFone(self, index: int):
-        IndexError
-    
+        self.__fones.remove(index)
+
     def toogleFavorited(self):
-        IndexError
+        self.__favorited = not self.__favorited
+
+def main():
     
-    def isFavorited(self):
-        return False
 
     
     

@@ -57,8 +57,33 @@
         },
         {
             "label": "2025-11-25_10-50-10",
-            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id =  id\n        self.__number = number\n\n    def getId(self):\n        return self.__id\n    \n    def getNumber(self):\n        return self.__number\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n    \n    def isValid(self):\n        n = \"0123456789().\"\n\n        for x in self.__number:\n            if x not in n:\n                raise Exception (f\"fail: invalid number\")\n            return False\n\n\nclass Contact:\n    def __init__(self, name: str):\n        self.__name = name\n    \n    def __str__(self):\n        return f\"- {self.__name} []\"\n\n    def addFone(self, id: str, number: str):\n        IndexError\n    \n    def rmFone(self, index: int):\n        IndexError\n    \n    def toogleFavorited(self):\n        IndexError\n    \n    def isFavorited(self):\n        return False\n\n    \n    \n    \n\n    \n        \n\n    \n\n",
+            "content": "@@ -568,40 +568,8 @@\n ame%0A\n-        fones = list%5BFone%5D = %5B%5D%0A\n     \n@@ -679,24 +679,34 @@\n r):%0A        \n+IndexError\n %0A    %0A    de\n",
             "lines": "51"
+        },
+        {
+            "label": "2025-11-25_21-51-47",
+            "content": "@@ -568,31 +568,24 @@\n ame%0A        \n-self.__\n fones = list\n@@ -662,22 +662,8 @@\n e%7D %5B\n-%7Bself.__fones%7D\n %5D%22%0A%0A\n@@ -711,59 +711,8 @@\n r):%0A\n-        self.__fones.append((id, number))%0A        %0A\n     \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-25_22-06-43",
+            "content": "@@ -770,17 +770,39 @@\n umber))%0A\n+        %0A        %0A    \n %0A\n-\n     def \n@@ -839,35 +839,23 @@\n     \n-self.__fones.remove(index)%0A\n+IndexError%0A    \n %0A   \n@@ -882,24 +882,24 @@\n (self):%0A\n-\n         \n %0A    %0A  \n@@ -882,32 +882,42 @@\n (self):%0A        \n+IndexError\n %0A    %0A    def is\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-25_22-15-28",
+            "content": "@@ -611,169 +611,50 @@\n     \n-    self.__favorited = False%0A    %0A    def __str__(self):%0A        prefixo = %22-%22%0A        if self.__favorited:%0A            prefixo = %22@%22%0A%0A        return f%22%7Bprefixo%7D\n+%0A    def __str__(self):%0A        return f%22-\n  %7Bse\n@@ -884,52 +884,61 @@\n     \n-self.__favorited = not self.__favorited%0A    \n+%0A    %0A    def isFavorited(self):%0A        return False\n %0A%0A  \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-25_22-33-47",
+            "content": "@@ -744,77 +744,8 @@\n  %22@%22\n-%0A        %0A        telefones = %22 ,%22.join%5Bstr(x )for x in self.__fones%5D\n %0A%0A  \n@@ -789,17 +789,21 @@\n %7D %5B%7B\n-tele\n+self.__\n fones\n+%7D\n %5D%22%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-25_22-38-56",
+            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id =  id\n        self.__number = number\n\n    def getId(self):\n        return self.__id\n    \n    def getNumber(self):\n        return self.__number\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n    \n    def isValid(self):\n        n = \"0123456789().\"\n\n        for x in self.__number:\n            if x not in n:\n                raise Exception (f\"fail: invalid number\")\n            return False\n\n\nclass Contact:\n    def __init__(self, name: str):\n        self.__name = name\n        self.__fones = list[Fone] = []\n        self.__favorited = False\n    \n    def __str__(self):\n        prefixo = \"-\"\n        if self.__favorited:\n            prefixo = \"@\"\n        \n        telefones = \" ,\".join[str(x )for x in self.__fones]\n\n        return f\"{prefixo} {self.__name} [{telefones]\"\n\n    def addFone(self, id: str, number: str):\n        self.__fones.append((id, number))\n\n    def rmFone(self, index: int):\n        self.__fones.remove(index)\n\n    def toogleFavorited(self):\n        self.__favorited = not self.__favorited\n    \n\n    \n    \n    \n\n    \n        \n\n    \n\n",
+            "lines": "57"
         }
     ]
 }
