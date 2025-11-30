@@ -1,0 +1,18 @@
+2025-11-29 23:18:48, EXEC, v:1, k:poo@contato, mode:FULL, rate:60
+2025-11-29 23:18:49, EXEC, v:1, k:poo@contato, mode:FULL, rate:60
+2025-11-29 23:18:50, MOVE, v:1, k:poo@contato, mode:BACK
+2025-11-29 23:18:58, MOVE, v:1, k:poo@contato, mode:PICK
+2025-11-29 23:18:59, EXEC, v:1, k:poo@contato, mode:FULL, rate:60
+2025-11-29 23:31:28, EXEC, v:1, k:poo@contato, mode:FULL, rate:20, size:102
+2025-11-29 23:32:02, MOVE, v:1, k:poo@contato, mode:BACK
+2025-11-29 23:32:14, MOVE, v:1, k:poo@contato, mode:PICK
+2025-11-29 23:32:15, EXEC, v:1, k:poo@contato, mode:FULL, rate:20
+2025-11-29 23:39:03, EXEC, v:1, k:poo@contato, mode:FULL, rate:20, size:101
+2025-11-29 23:39:04, EXEC, v:1, k:poo@contato, mode:FULL, rate:20
+2025-11-29 23:41:00, EXEC, v:1, k:poo@contato, mode:FULL, rate:80, size:101
+2025-11-29 23:41:31, MOVE, v:1, k:poo@contato, mode:BACK
+2025-11-29 23:42:50, MOVE, v:1, k:poo@contato, mode:PICK
+2025-11-29 23:42:51, EXEC, v:1, k:poo@contato, mode:FULL, rate:80, size:101
+2025-11-29 23:44:25, EXEC, v:1, k:poo@contato, mode:FULL, rate:100, size:103
+2025-11-29 23:44:31, MOVE, v:1, k:poo@contato, mode:BACK
+2025-11-29 23:45:17, SELF, v:1, k:poo@contato, rate:100, human:SIM, guide:SIM, alone:10, study:240
