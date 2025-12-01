@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-30_17-01-19",
+            "content": "@@ -1376,479 +1376,13 @@\n    %0A\n-class Agenda:%0A    def __init__(self):%0A        self.__contacts: dict%5Bstr,Contact%5D = %7B%7D%0A    %0A    def find_pos_by_name(self, name: str) -%3E int:%0A        contacts_sorted = self.getContacts()%0A%0A        for index, contact in enumerate(contacts_sorted):%0A            if contact.getName().lower() == name.lower():%0A                return index%0A        return -1%0A%0A    def addContact(self, name: str, fones: )%0A    %0A    %0A    def getContacts(self):%0A        return self.contacts%0A    %0A\n     \n+%0A\n %0A   \n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-11-30_19-17-06",
+            "content": "@@ -1770,59 +1770,14 @@\n es: \n-list%5BFone%5D):%0A        self.__contacts%5Bname%5D = fones%0A\n+)%0A    \n %0A   \n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-30_20-04-14",
+            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id =  id\n        self.__number = number\n\n    def getId(self):\n        return self.__id\n    \n    def getNumber(self):\n        return self.__number\n    \n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n    \n    def isValid(self):\n        valid_chars = \"0123456789().\"\n        for char in self.__number: \n            if char not in valid_chars:\n                raise ValueError(\"fail: invalid number\")\n        return True\n\n\nclass Contact:\n    def __init__(self, name: str):\n        self.__name = name\n        self.__fones: list[Fone] = []\n        self.__favorited = False\n    \n    def __str__(self):\n        prefixo = \"-\"\n        if self.__favorited:\n            prefixo = \"@\"\n        \n        telefones = \", \".join(str(fone) for fone in self.__fones)\n\n        return f\"{prefixo} {self.__name} [{telefones}]\"\n\n    def addFone(self, id: str, number: str):\n        fone = Fone(id, number)\n        if fone.isValid():\n            self.__fones.append(fone)\n\n    def rmFone(self, index: int):\n        self.__fones.pop(index)\n\n    def toogleFavorited(self):\n        self.__favorited = not self.__favorited\n    \n    def GetFones(self):\n        return self.__fones\n    \n    def getName(self):\n        return self.__name\n    \n    def setName(self, name: str):\n    \n        self.__name = name  \n    \nclass Agenda:\n    def __init__(self):\n        self.__contacts: dict[str,Contact] = {}\n    \n    def find_pos_by_name(self, name: str) -> int:\n        contacts_sorted = self.getContacts()\n\n        for index, contact in enumerate(contacts_sorted):\n            if contact.getName().lower() == name.lower():\n                return index\n        return -1\n\n    def addContact(self, name: str, fones: list[Fone]):\n        self.__contacts[name] = fones\n\n    \n    def getContacts(self):\n        return self.contacts\n    \n    \n    \n    \n    \n\n    \n        \n\n    \n\n",
+            "lines": "87"
+        }
+    ]
+}
