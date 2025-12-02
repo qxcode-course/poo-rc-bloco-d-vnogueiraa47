@@ -71,20 +71,14 @@ class Agenda:
     def addContact(self, name: str, fones: list[Fone]):
         contato = self.__find_pos_by_name(name)
         if contato == -1:
-            self.__contacts[name] = fones
-        
-
-
-
-
-
-
-
-
-
-    
+            lista = self.getContacts()
+            
     def getContacts(self):
-        return self.contacts
+        return list(self.__contacts.values())
+    
+    def rmContact(self, name: str):
+        if name in self.__contacts:
+            del self.__contacts[name]
 
 
 
